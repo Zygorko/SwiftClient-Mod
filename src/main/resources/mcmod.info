@@ -1,0 +1,15 @@
+[
+  {
+    "modid": "swiftclienthud",
+    "name": "SwiftClient HUD",
+    "description": "Feather-style Right Shift HUD, Mods menu with search, Keystrokes, PotionEffect, Armor Status, ToggleSprint, Title, FPS, CPS, Ping, TNT Timer and F5 Self Nametag.",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "",
+    "authorList": ["SwiftClient"],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]
