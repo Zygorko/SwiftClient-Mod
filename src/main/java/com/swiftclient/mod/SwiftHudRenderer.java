@@ -19,7 +19,7 @@ import net.minecraft.entity.item.EntityTNTPrimed;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
-import net.minecraft.stat.StatBase;
+import net.minecraft.util.StatCollector;
 import net.minecraftforge.client.event.MouseEvent;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.client.event.RenderPlayerEvent;
@@ -218,7 +218,7 @@ public class SwiftHudRenderer {
                 for (PotionEffect pe : active) {
                     Potion potion = Potion.potionTypes[pe.getPotionID()];
                     if (potion != null) {
-                        String pName = StatBase.translateFormal(potion.getName());
+                        String pName = StatCollector.translateToLocal(potion.getName());
                         String dur = Potion.getDurationString(pe);
                         lines.add(pName + " " + (pe.getAmplifier() + 1) + " (" + dur + ")");
                     }
