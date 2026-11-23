@@ -17,6 +17,16 @@ jobs:
         with:
           distribution: temurin
           java-version: '8'
+          cache: 'gradle'
+        continue-on-error: true
+        id: java_step
+
+      - name: Retry JDK 8 setup if tar failed
+        if: steps.java_step.outcome == 'failure'
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '8'
 
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
