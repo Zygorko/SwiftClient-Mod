@@ -1,10 +1,9 @@
 buildscript {
     repositories {
-        mavenCentral()
-        maven {
-            name = "forge"
-            url = "https://maven.minecraftforge.net/"
-        }
+        mavenLocal()
+        maven { url = "https://maven.minecraftforge.net/" }
+        maven { url = "https://repo.maven.apache.org/maven2/" }
+        jcenter()
     }
     dependencies {
         classpath "net.minecraftforge.gradle:ForgeGradle:2.1-SNAPSHOT"
@@ -25,6 +24,12 @@ minecraft {
     runDir = "run"
     mappings = "stable_22"
     makeObfSourceJar = false
+}
+
+repositories {
+    maven { url = "https://maven.minecraftforge.net/" }
+    maven { url = "https://repo.maven.apache.org/maven2/" }
+    jcenter()
 }
 
 processResources {
